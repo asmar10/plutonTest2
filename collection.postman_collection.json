@@ -12,7 +12,70 @@
 				"method": "GET",
 				"header": []
 			},
-			"response": []
+			"response": [
+				{
+					"name": "getRequest renders the home page with balance value set as current balance",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "0x87A0e2c3afdd82C30e34ca860A121e220a9Bf9a9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/getBalance",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getBalance"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1971"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7b3-cC/TD/WhzYVdQKH3ie/COJN9DPQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 Jan 2023 12:29:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>test</title>\n        <link rel=\"stylesheet\"\n            href=\"https://use.fontawesome.com/releases/v5.6.3/css/all.css\"\n            integrity=\"sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/\"\n            crossorigin=\"anonymous\">\n        <link rel=\"stylesheet\"\n            href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css\"\n            integrity=\"sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS\"\n            crossorigin=\"anonymous\">\n        <link rel=\"stylesheet\" href=\"css/styles.css\">\n        <script src=\"js/index.js\" type=\"module\"></script>\n        <script src=\"https://cdn.ethers.io/lib/ethers-5.2.umd.min.js\"\n            type=\"application/javascript\"></script>\n    </head>\n    <body>\n        <div class=\"container\">\n            <div class=\"jumbotron centered\">\n                <h1 class=\"display-3\">Test 2 </h1>\n                <form action=\"/getBalance\" method=\"POST\">\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control text-center\" id=\"account\"\n            name=\"account\"\n            placeholder=\"Get account balance\" required>\n        \n                    </div>\n                    <button type=\"submit\" class=\"btn btn-dark \">Get\n          balance</button>\n                </form>\n                <br>\n                <p>Balance: 61</p>\n                <form action=\"/transferTokens\" method=\"POST\">\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control text-center\" name=\"to\"\n              placeholder=\"Enter address to transfer tokens\" id=\"toAddress\"\n              required>\n                        <input type=\"number\" class=\"form-control text-center\" name=\"tokens\"\n              placeholder=\"Amount\" id=\"amount\" required>\n          \n                    </div>\n                    <button type=\"submit\" class=\"btn btn-dark\" id=\"transferButton\"\n            onclick=\"transferTokens()\">Transfer</button>\n                </form>\n            </div>\n        </div>\n    </body>\n</html>"
+				}
+			]
 		},
 		{
 			"name": "Home page",
@@ -20,7 +83,57 @@
 				"method": "GET",
 				"header": []
 			},
-			"response": []
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000",
+							"host": [
+								"localhost"
+							],
+							"port": "3000"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1969"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7b1-Vg0EWqFJCK+LPvzTPEVZ6YXKR64\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 Jan 2023 12:29:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>test</title>\n        <link rel=\"stylesheet\"\n            href=\"https://use.fontawesome.com/releases/v5.6.3/css/all.css\"\n            integrity=\"sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/\"\n            crossorigin=\"anonymous\">\n        <link rel=\"stylesheet\"\n            href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css\"\n            integrity=\"sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS\"\n            crossorigin=\"anonymous\">\n        <link rel=\"stylesheet\" href=\"css/styles.css\">\n        <script src=\"js/index.js\" type=\"module\"></script>\n        <script src=\"https://cdn.ethers.io/lib/ethers-5.2.umd.min.js\"\n            type=\"application/javascript\"></script>\n    </head>\n    <body>\n        <div class=\"container\">\n            <div class=\"jumbotron centered\">\n                <h1 class=\"display-3\">Test 2 </h1>\n                <form action=\"/getBalance\" method=\"POST\">\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control text-center\" id=\"account\"\n            name=\"account\"\n            placeholder=\"Get account balance\" required>\n        \n                    </div>\n                    <button type=\"submit\" class=\"btn btn-dark \">Get\n          balance</button>\n                </form>\n                <br>\n                <p>Balance: </p>\n                <form action=\"/transferTokens\" method=\"POST\">\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control text-center\" name=\"to\"\n              placeholder=\"Enter address to transfer tokens\" id=\"toAddress\"\n              required>\n                        <input type=\"number\" class=\"form-control text-center\" name=\"tokens\"\n              placeholder=\"Amount\" id=\"amount\" required>\n          \n                    </div>\n                    <button type=\"submit\" class=\"btn btn-dark\" id=\"transferButton\"\n            onclick=\"transferTokens()\">Transfer</button>\n                </form>\n            </div>\n        </div>\n    </body>\n</html>"
+				}
+			]
 		}
 	]
 }
