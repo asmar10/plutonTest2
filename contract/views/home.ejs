@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+  <div class="container">
+    <div class="jumbotron centered">
+      <h1 class="display-3">Test 2 </h1>
+
+      <form action="/getBalance" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control text-center" name="account"
+            placeholder="Get account balance" required>
+        </div>
+        <button type="submit" class="btn btn-dark ">Get balance</button>
+      </form><br>
+
+      <form action="/transferTokens" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control text-center" name="to"
+            placeholder="Enter address to transfer tokens" required>
+          <input type="number" class="form-control text-center" name="tokens"
+            placeholder="Amount" required>
+        </div>
+        <button type="submit" class="btn btn-dark">Transfer</button>
+      </form>
+
+
+    </div>
+  </div>
+  <%- include('partials/footer') %>

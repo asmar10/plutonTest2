@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+  <div class="container">
+    <div class="jumbotron centered">
+      <h1 class="display-3">Test 2 </h1>
+
+      <form action="/getBalance" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control text-center" id="account"
+            name="account"
+            placeholder="Get account balance" required>
+        </div>
+        <button type="submit" class="btn btn-dark ">Get
+          balance</button>
+      </form><br>
+      <p>Balance: <%= balance %></p>
+
+
+        <form action="/transferTokens" method="POST">
+          <div class="form-group">
+            <input type="text" class="form-control text-center" name="to"
+              placeholder="Enter address to transfer tokens" id="toAddress"
+              required>
+            <input type="number" class="form-control text-center" name="tokens"
+              placeholder="Amount" id="amount" required>
+          </div>
+          <button type="submit" class="btn btn-dark" id="transferButton"
+            onclick="transferTokens()">Transfer</button>
+        </form>
+
+
+
+
+
+      </div>
+    </div>
+    <%- include('partials/footer') %>
